@@ -1,0 +1,10 @@
+{
+  "typeIndex": 134250496,
+  "name": "Manually generated issue",
+  "description": "<p>This type of issue is used for issues that are generated manually within Burp Suite.</p>",
+  "remediation": null,
+  "webIntro": null,
+  "typicalSeverity": "INFO",
+  "references": [],
+  "vulnerabilityClassifications": []
+}

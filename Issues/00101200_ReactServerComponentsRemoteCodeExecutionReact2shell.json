@@ -1,0 +1,28 @@
+{
+  "typeIndex": 1052160,
+  "name": "React Server Components remote code execution (React2Shell)",
+  "description": "<p>The application is vulnerable to <b>CVE-2025-55182</b> (React) and <b>CVE-2025-66478</b> (Next.js), critical Remote Code Execution vulnerabilities in React Server Components with CVSS score of 10.0.</p><p><b>Vulnerability Overview:</b></p><ul><li>Unauthenticated Remote Code Execution via insecure deserialization</li><li>The RSC Flight protocol fails to validate property existence in colon-delimited references</li><li>Malformed multipart form-data triggers unhandled exceptions leading to RCE</li><li>No prerequisites or special configuration required for exploitation</li></ul>",
+  "remediation": "<p><b>CRITICAL - Immediate Action Required</b></p><p>This vulnerability allows unauthenticated attackers to execute arbitrary code on the server. Patch immediately.</p><p><b>Upgrade to Patched Versions:</b></p><ul><li><b>React:</b> 19.0.1, 19.1.2, or 19.2.1</li><li><b>Next.js:</b> 15.0.5, 15.1.9, 15.2.6, 15.3.6, 15.4.8, 15.5.7, or 16.0.7</li></ul><p><b>Remediation Steps:</b></p><ol><li>Update package.json dependencies to patched versions</li><li>Run npm install or npm update</li><li>Rebuild and redeploy application</li><li>Verify fix by re-scanning</li></ol>",
+  "webIntro": null,
+  "typicalSeverity": "HIGH",
+  "references": [
+    {
+      "title": "Next.js Security Advisory",
+      "url": "https://nextjs.org/blog/CVE-2025-66478"
+    },
+    {
+      "title": "CVE-2025-55182 Details",
+      "url": "https://www.wiz.io/blog/critical-vulnerability-in-react-cve-2025-55182"
+    },
+    {
+      "title": "Detection of CVE-2025-55182",
+      "url": "https://slcyber.io/research-center/high-fidelity-detection-mechanism-for-rsc-next-js-rce-cve-2025-55182-cve-2025-66478/"
+    }
+  ],
+  "vulnerabilityClassifications": [
+    {
+      "title": "CWE-502: Deserialization of Untrusted Data",
+      "url": "https://cwe.mitre.org/data/definitions/502.html"
+    }
+  ]
+}

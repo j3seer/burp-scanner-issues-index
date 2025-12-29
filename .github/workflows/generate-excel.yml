@@ -1,6 +1,7 @@
 name: Generate Burp Issues Excel
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - "Issues/**"
